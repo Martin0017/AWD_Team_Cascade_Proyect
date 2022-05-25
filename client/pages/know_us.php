@@ -11,23 +11,19 @@
   </head>
   <body>
 
-<div class="container">
-     
-    <div class="row">
+
+<div>
         <?php include "../components/navbar.html"; ?>
     </div>
-    <div class="row">
-        <?php include "../components/footer.html"; ?>
-    </div>
 
-
-</div>
-    <div class="row">
+    <div>
         <?php include "../components/carousel.html"; ?>
     </div>
 
 
-    <h1>Hello, world! :vvv, aca habria informacion de la zona del Choco Andino y de nosotros :vvv</h1>
+    <div>
+        <?php include "../components/footer.html"; ?>
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

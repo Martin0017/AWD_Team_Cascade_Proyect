@@ -16,24 +16,18 @@
 </head>
 
 <body>
-
-  <div class="container">
  
-   <div class="row">
+   <div>
       <?php include "../components/navbar.html"; ?>
     </div>
 
-
-    <div class="row">
-      <?php include "../components/footer.html"; ?> 
-    </div>
-
-    <div class="row">
+    <div>
         <?php include "../components/home.html"; ?>
     </div>
 
-  </div>
-
+  <div>
+      <?php include "../components/footer.html"; ?> 
+    </div>
 
   <!-- Optional JavaScript; choose one of the two! -->
 

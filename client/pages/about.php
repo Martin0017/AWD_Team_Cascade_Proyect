@@ -10,20 +10,16 @@
     <link rel="stylesheet" href="../css/about.css" type="text/css"/>
   </head>
   <body>
-
-<div class="container">
      
-    <div class="row">
+  <div class="container">
+    <div class="row" >
         <?php include "../components/navbar.html"; ?>
     </div>
-
-    <div class="row">
-        <?php include "../components/footer.html"; ?>
     </div>
 
-</div>
-
+    <br><br><br><br>
     <!-- <h3>temas tecnicos y se explica mas de como funciona la pagina</h3> -->
+    <div class="about-class">
     <h3 class="title">Acerca de</h3>
     <div class="flex">
       <div class="box colour">
@@ -50,6 +46,11 @@
         de la fauna del sector, además de información de los programadores del sitio web.
         Acerca de es la sección que muestra de forma técnica cómo se capturan las imágenes.
       </div>
+    </div>
+    </div>
+    <br><br>
+    <div>
+        <?php include "../components/footer.html"; ?>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 

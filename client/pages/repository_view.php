@@ -11,29 +11,24 @@
   </head>
   <body>
 
-<div class="container">
      
-    <div class="row">
+    <div>
         <?php include "../components/navbar.html"; ?>
     </div>
 
 
 
-    <div class="row">
-        <?php include "../components/footer.html"; ?>
+    <br><br><br><br><br>  <br><br><br><br><br>
+
+    <div> 
+    <?php include "../components/pagination.html"; ?>
     </div>
 
-    <div class="row"> 
-<?php include "../components/pagination.html"; ?>
-</div>
+    <br><br><br><br><br>  <br><br><br><br><br>  <br><br><br><br><br>
 
-</div>
-
-
-<h1> Esta es la parte fuerte, aca se realizan las busquedas y muestran la informacion, por el momento
-  aca se realizara una lectura en primera instancia ya en segundo parcial se añadira la busqueda personalizada
- y al pinchar una foto saldra una nueva pagina con informacion </h1>
-
+    <div>
+        <?php include "../components/footer.html"; ?>
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
