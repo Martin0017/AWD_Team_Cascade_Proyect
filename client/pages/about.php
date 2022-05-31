@@ -19,35 +19,36 @@
 
     <br><br><br><br>
     <!-- <h3>temas tecnicos y se explica mas de como funciona la pagina</h3> -->
-    <div class="about-class">
-    <h3 class="title">Acerca de</h3>
-    <div class="flex">
-      <div class="box colour">
-        <h5>¿Cómo se registran las imágenes de la fauna del Chocó Andino?</h5>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ipsum elit, 
-        condimentum vitae nulla eget, sagittis tincidunt ipsum. Ut non ornare ex. Vivamus nec auctor massa.
-        Sed at interdum velit. Quisque felis tellus, laoreet id dapibus nec, faucibus vehicula purus. 
-        Vivamus iaculis dictum venenatis. Suspendisse sit amet bibendum augue. Ut a pretium turpis. 
-        Curabitur ullamcorper nibh eleifend nibh placerat, eget pharetra magna lacinia.
+    <div class="background">
+      <div class="about-class">
+      <h3 class="title">Acerca de</h3>
+      <div class="flex">
+        <div class="box colour">
+          <h5>¿Cómo se registran las imágenes de la fauna del Chocó Andino?</h5>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ipsum elit, 
+          condimentum vitae nulla eget, sagittis tincidunt ipsum. Ut non ornare ex. Vivamus nec auctor massa.
+          Sed at interdum velit. Quisque felis tellus, laoreet id dapibus nec, faucibus vehicula purus. 
+          Vivamus iaculis dictum venenatis. Suspendisse sit amet bibendum augue. Ut a pretium turpis. 
+          Curabitur ullamcorper nibh eleifend nibh placerat, eget pharetra magna lacinia.
+        </div>
+        <div class="box colour">
+          <h5>Por ejemplo: </h5>
+          <img src="../images/bird.jpg" alt="Bird image" class="image">
+          <img src="../images/frog.png" alt="Frog image" class="image">
+        </div>
+        <div class="box colour">
+          <h5>¿Cómo funciona la página web?</h5>
+          La web está dividida en cuatro secciones: Inicio, Repositorio, Conócenos y Acerca de.
+          En el inicio podemos encontrar toda la información acerca de  la reserva del Chocó Andino. 
+          Repositorio permitirá al administrador la gestión de contenidos (principalmente imágenes, audio y video) 
+          relacionados con la fauna de esta área ubicada en la zona nororiente de Pichincha, mientras que por parte 
+          de los visitantes tendrán acceso a la visualización del contenido cargado.
+          Conócenos es la sección que contiene la información de las personas encargadas de recopilar las imágenes 
+          de la fauna del sector, además de información de los programadores del sitio web.
+          Acerca de es la sección que muestra de forma técnica cómo se capturan las imágenes.
+        </div>
       </div>
-      <div class="box colour">
-        <h5>Por ejemplo: </h5>
-        <img src="../images/bird.jpg" alt="Bird image" class="image">
-        <img src="../images/frog.png" alt="Frog image" class="image">
       </div>
-      <div class="box colour">
-        <h5>¿Cómo funciona la página web?</h5>
-        La web está dividida en cuatro secciones: Inicio, Repositorio, Conócenos y Acerca de.
-        En el inicio podemos encontrar toda la información acerca de  la reserva del Chocó Andino. 
-        Repositorio permitirá al administrador la gestión de contenidos (principalmente imágenes, audio y video) 
-        relacionados con la fauna de esta área ubicada en la zona nororiente de Pichincha, mientras que por parte 
-        de los visitantes tendrán acceso a la visualización del contenido cargado.
-        Conócenos es la sección que contiene la información de las personas encargadas de recopilar las imágenes 
-        de la fauna del sector, además de información de los programadores del sitio web.
-        Acerca de es la sección que muestra de forma técnica cómo se capturan las imágenes.
-      </div>
-    </div>
-    </div>
     <br><br>
     <div>
         <?php include "../components/footer.html"; ?>
