@@ -22,7 +22,7 @@
     </div>
 
     <div>
-        <?php include "../components/home.php"; ?>
+        <?php include "../components/login-form.php"; ?>
     </div>
 
   <div>

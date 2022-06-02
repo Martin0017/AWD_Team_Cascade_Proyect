@@ -1,6 +1,3 @@
-<?php 
-
-?>
 
 
     <footer class="bg-dark text-center text-white position-relative fixed-bottom">

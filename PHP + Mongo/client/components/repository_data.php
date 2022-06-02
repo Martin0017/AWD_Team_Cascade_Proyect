@@ -1,6 +1,5 @@
 <?php 
 
-require $_SERVER['DOCUMENT_ROOT'].'../client/controllers/MongoController.php';
 $data_repository = MongoController::get_all('Repository','Fauna','type','animal');
 
 foreach($data_repository as $data){

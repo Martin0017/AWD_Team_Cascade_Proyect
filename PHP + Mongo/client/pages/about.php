@@ -13,7 +13,7 @@
      
   <div class="container">
     <div class="row" >
-        <?php include "../components/navbar.html"; ?>
+        <?php include "../components/navbar.php"; ?>
     </div>
     </div>
 

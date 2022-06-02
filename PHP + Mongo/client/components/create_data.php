@@ -1,8 +1,3 @@
-<?php 
-
-require $_SERVER['DOCUMENT_ROOT'].'../client/controllers/MongoController.php';
-?>
-
 
 <br><br><br><br><br><br>
 

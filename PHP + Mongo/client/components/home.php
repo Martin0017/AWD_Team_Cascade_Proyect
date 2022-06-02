@@ -1,6 +1,5 @@
 <?php 
 
-require $_SERVER['DOCUMENT_ROOT'].'../client/controllers/MongoController.php';
 $dataHome = MongoController::search_and_get('InfoWeb',
                                             'HomeData',
                                             'ID',
