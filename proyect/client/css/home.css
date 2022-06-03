@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Luckiest+Guy&family=Macondo&family=Mali:wght@500&family=Permanent+Marker&display=swap');
+
+
+.home-class{
+    background-image: url(https://i.ibb.co/WHdHMcY/main-Photo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*backdrop-filter: blur(5px);*/
+    min-height: 150vh;
+    background-position: center center;
+}
+
+.reserveTitle {
+    color: darkgreen;
+    font-family: 'Macondo', cursive;
+    text-align: center;
+    position: relative;
+    top: 80px;
+}
+     h1 {
+        font-weight: bold;
+        background-color: rgb(238, 238, 238);
+        width: 100%;
+     }
+
+
+.mainPhoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+    .pic1 {
+        background-image: url(https://i.ibb.co/C2q7wbh/image1.jpg);
+        width: 380px;
+        height: 275px;
+        background-size: cover;
+        float: left;
+        margin-left: 100px;
+        border-radius: 8px;
+    }
+    .pic1:hover {
+        transform: scale(1.05, 1.05);
+    }
+    .pic2 {
+        background-image: url(https://i.ibb.co/gWtc4rr/pic2.jpg);
+        width: 380px;
+        height: 275px;
+        top: 50%;
+        background-size: cover;
+        display: inline-block;
+        border-radius: 8px;
+    }
+    .pic2:hover {
+        transform: scale(1.05, 1.05);
+    }
+    .pic3 {
+        background-image: url(https://i.ibb.co/2PGk9kF/pic3.jpg);
+        width: 380px;
+        height: 275px;
+        top: 50%;
+        background-size: cover;
+        float: right;
+        margin-right: 100px;
+        border-radius: 8px;
+    }
+    .pic3:hover {
+        transform: scale(1.05, 1.05);
+    }
+    
+.information {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-family: 'Mali', cursive;
+    padding-top: 20px;
+
+}
+
+    .p1 {
+        background-color: #eee;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        padding: 20px 30px;
+        margin: 10px 15px;
+        width: 600px;
+        text-align: center;
+        transition: 0.3s;
+        color: black;
+        border-left: solid 4px green;
+        backdrop-filter: blur(5px);
+        font-weight: bold;
+        box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    }
+    .p1:hover {
+        transform: scale(1.05, 1.05);
+    }
