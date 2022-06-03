@@ -1,6 +1,6 @@
 <?php 
 
-require $_SERVER['DOCUMENT_ROOT'].'../client/controllers/MongoController.php';
+require $_SERVER['DOCUMENT_ROOT'].'../controllers/MongoController.php';
 $is_login = MongoController::is_login();
 
 ?>
