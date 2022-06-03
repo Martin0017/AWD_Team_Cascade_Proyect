@@ -1,5 +1,14 @@
 .title {
     text-align: center;
+    color: white;
+}
+
+.background {
+    background-image: url(../images/mainPhoto.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: fit-content;
 }
 
 .flex {
