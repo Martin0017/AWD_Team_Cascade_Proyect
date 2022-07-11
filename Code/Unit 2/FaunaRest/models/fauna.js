@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const faunaRouterchema = new mongoose.Schema({
+const faunaRouterSchema = new mongoose.Schema({
     id: {
         type: Number,
         required: true,
@@ -32,4 +32,4 @@ const faunaRouterchema = new mongoose.Schema({
     }
 }, { collection: 'Fauna' })
 
-module.exports = mongoose.model('Fauna', faunaRouterchema)
+module.exports = mongoose.model('Fauna', faunaRouterSchema)
