@@ -1,5 +1,5 @@
 require("dotenv").config();
-
+const port = 3012;
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -14,4 +14,4 @@ app.use(express.json());
 const usersRouter = require("./routers/homeData");
 app.use("/ChocoAndino", usersRouter);
 
-app.listen(3000, () => console.log("Server Started on port 3000"));
+app.listen(port, () => console.log("Server Started on port" + port));
