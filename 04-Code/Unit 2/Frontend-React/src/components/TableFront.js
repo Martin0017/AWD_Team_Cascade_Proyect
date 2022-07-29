@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../index.css'
+import './TableFront.css';
 import { makeStyles } from '@material-ui/core/styles';
 import { Table, TableContainer, TableHead, TableCell, TableBody, TableRow, Modal, Button, TextField } from '@material-ui/core';
 import { Edit, Delete } from '@material-ui/icons';
@@ -11,26 +12,6 @@ import InputLabel from "@material-ui/core/InputLabel";
 import axios from 'axios'
 
 const baseUrl = 'http://localhost:3001/ChocoAndino/fauna/'
-
-const useStyles = makeStyles((theme) => ({
-    modal: {
-        position: 'absolute',
-        width: 400,
-        backgroundColor: theme.palette.background.paper,
-        border: '2px solid #000',
-        boxShadow: theme.shadows[5],
-        padding: theme.spacing(2, 4, 3),
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)'
-    },
-    icons: {
-        cursor: 'pointer'
-    },
-    inputMaterial: {
-        width: '100%'
-    }
-}));
 
 const TableFront = (props) => {
 
@@ -49,6 +30,25 @@ const TableFront = (props) => {
         type: '',
         url_image: ''
     })
+
+    const useSelectStyles = makeStyles(theme => ({
+        formControl: {
+            margin: theme.spacing(1),
+            minWidth: 120
+        },
+        selectEmpty: {
+            marginTop: theme.spacing(2)
+        }
+    }));
+
+    const handleChange = e => {
+        const { name, value } = e.target;
+        setSelectedFauna(prevState => ({
+            ...prevState,
+            [name]: value
+        }))
+        console.log(selectedFauna);
+    }
 
     const getRequest = async () => {
         await axios.get(baseUrl)
@@ -113,37 +113,17 @@ const TableFront = (props) => {
         await getRequest();
     }, [])
 
-    const handleChange = e => {
-        const { name, value } = e.target;
-        setSelectedFauna(prevState => ({
-            ...prevState,
-            [name]: value
-        }))
-        console.log(selectedFauna);
-    }
-
-    const useSelectStyles = makeStyles(theme => ({
-        formControl: {
-            margin: theme.spacing(1),
-            minWidth: 120
-        },
-        selectEmpty: {
-            marginTop: theme.spacing(2)
-        }
-    }));
-
     const options = ["Ave", "Insecto", "Anfibio", "Animal", "Aracnido"];
     const inputLabel = React.useRef(null);
     const classes = useSelectStyles();
     const [labelWidth] = React.useState(0);
-    
 
     const bodyInsert = (
         <div className={styles.modal}>
             <h3>Agregar Nuevo Registro de Fauna</h3>
             <br />
-            <TextField name="id" className={styles.inputMaterial} label="ID" onChange={handleChange}
-                value={selectedFauna && selectedFauna.id} />
+            <TextField name="id" type="text" className={styles.inputMaterial} label="ID" onChange={handleChange}
+                value={selectedFauna && selectedFauna.id} readOnly />
             <br />
             <TextField name="scientific_name" className={styles.inputMaterial} label="Nombre Científico" onChange={handleChange} />
             <br />
@@ -152,13 +132,21 @@ const TableFront = (props) => {
             <TextField name="description" className={styles.inputMaterial} label="Descripción" onChange={handleChange} />
             <br /><br />
             <TextField name="date" type="date" className={styles.inputMaterial} onChange={handleChange} />
-            <br />
-            <Autocomplete
-                options={options}
-                style={{ width: 340 }}
-                renderInput={(params) =>
-                    <TextField {...params} name="type" label="Tipo" className={styles.inputMaterial} onChange={handleChange} />}
-            />
+            <br /><br />
+            <FormControl className={styles.inputMaterial}>
+                <InputLabel ref={inputLabel}>Tipo</InputLabel>
+                <Select
+                    name="type"
+                    onChange={handleChange}
+                    labelWidth={labelWidth}
+                >
+                    {options.map(item => (
+                        <MenuItem value={item}>{item} &nbsp;&nbsp;&nbsp;</MenuItem>
+                    ))}
+
+                </Select>
+            </FormControl>
+            {/* <TextField name="type" label="Tipo" className={styles.inputMaterial} onChange={handleChange} /> */}
             <TextField name="url_image" className={styles.inputMaterial} label="URL de la imagen" onChange={handleChange} />
             <br /><br />
             <div align="right">
@@ -180,18 +168,18 @@ const TableFront = (props) => {
             <br /><br />
             <TextField name="date" type="date" className={styles.inputMaterial} onChange={handleChange} value={selectedFauna && selectedFauna.date} />
             <br /><br />
-            <FormControl className={classes.formControl}> 
+            <FormControl className={styles.inputMaterial}>
                 <InputLabel ref={inputLabel}>Tipo</InputLabel>
                 <Select
                     name="type"
                     value={selectedFauna && selectedFauna.type}
                     onChange={handleChange}
                     labelWidth={labelWidth}
-                    
                 >
                     {options.map(item => (
-                        <MenuItem value={item}>{item}</MenuItem>
+                        <MenuItem value={item}>{item} &nbsp;&nbsp;&nbsp;</MenuItem>
                     ))}
+
                 </Select>
             </FormControl>
             <br /><br />
@@ -216,10 +204,10 @@ const TableFront = (props) => {
 
     return (
         <div className="App">
-            <h2>Repositorio de Fauna Chocó Andino</h2>
-            <br />&nbsp;&nbsp;&nbsp;
-            <Button onClick={() => openCloseModalInsert()}>Insertar</Button>
-            <br /><br />
+            <h2 id='repotitle'>Repositorio de Fauna Chocó Andino</h2>
+            <br />
+            <Button id='buttonInsert' onClick={() => openCloseModalInsert()}>Insertar</Button>
+            <br />
             <TableContainer>
                 <Table>
                     <TableHead>
@@ -275,5 +263,25 @@ const TableFront = (props) => {
         </div>
     );
 }
+
+const useStyles = makeStyles((theme) => ({
+    modal: {
+        position: 'absolute',
+        width: 400,
+        backgroundColor: theme.palette.background.paper,
+        border: '2px solid #000',
+        boxShadow: theme.shadows[5],
+        padding: theme.spacing(2, 4, 3),
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)'
+    },
+    icons: {
+        cursor: 'pointer'
+    },
+    inputMaterial: {
+        width: '100%'
+    }
+}));
 
 export default TableFront

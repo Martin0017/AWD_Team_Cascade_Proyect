@@ -20,6 +20,11 @@
     background-position: center center;
 }
 
+#tableBox{
+    margin: 0px 28px 0px 28px;
+}
+
+/* footer */
 footer {
     color: white;
     background-color: blue;

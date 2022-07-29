@@ -1,6 +1,6 @@
-import axios from 'axios'
+import axios from 'axios';
 
-const baseUrl = 'http://54.210.116.27:3001/ChocoAndino/fauna/'
+const baseUrl = 'http://3.110.116.24:3001/ChocoAndino/fauna/'
 
 export async function getFauna(id) {
     try {

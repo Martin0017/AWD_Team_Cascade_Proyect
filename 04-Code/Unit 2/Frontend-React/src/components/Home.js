@@ -48,7 +48,7 @@ const Home = () => {
                   </div>
 
                   <div className="informationFooter">
-                    <a href="/">Informacion Compañia</a> |{" "}
+                    <a href="/">Informacion</a> |{" "}
                     <a href="/">Privacion y Politica</a> |{" "}
                     <a href="/">Terminos y Condiciones</a>
                   </div>

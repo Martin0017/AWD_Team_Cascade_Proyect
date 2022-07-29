@@ -1,0 +1,38 @@
+#repotitle {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.3em;
+    color: transparent;
+    background-color: #000000;
+    padding-top: 15px;
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.8);
+    -webkit-background-clip: text;
+       -moz-background-clip: text;
+            background-clip: text;
+}
+/* botton*/
+.MuiButton-label {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    font-weight: 600;
+    color: #000000;
+    border-radius: 6px;
+    background-color: #D8D8D8;
+    border: 2px solid #E0F3F6;
+}
+    .MuiButton-label:hover{
+        color: #000000;
+        background-color: #E0F3F6;
+        border: 2px solid rgba(0, 0, 0, 0.8);
+    }
+
+.MuiTable-root {
+    background-color: #D8D8D8;
+}
+
+.MuiTableCell-head {
+    color: white;
+}
