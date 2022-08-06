@@ -31,16 +31,6 @@ const TableFront = (props) => {
         url_image: ''
     })
 
-    const useSelectStyles = makeStyles(theme => ({
-        formControl: {
-            margin: theme.spacing(1),
-            minWidth: 120
-        },
-        selectEmpty: {
-            marginTop: theme.spacing(2)
-        }
-    }));
-
     const handleChange = e => {
         const { name, value } = e.target;
         setSelectedFauna(prevState => ({
@@ -115,7 +105,6 @@ const TableFront = (props) => {
 
     const options = ["Ave", "Insecto", "Anfibio", "Animal", "Aracnido"];
     const inputLabel = React.useRef(null);
-    const classes = useSelectStyles();
     const [labelWidth] = React.useState(0);
 
     const bodyInsert = (
