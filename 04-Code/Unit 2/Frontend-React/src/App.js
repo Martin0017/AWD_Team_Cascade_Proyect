@@ -7,7 +7,6 @@ import Repository from "./components/Repository";
 import About from "./components/About";
 import know_us from "./components/know_us";
 
-
 const App = () => {
   return (
     <Router>

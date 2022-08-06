@@ -4,7 +4,7 @@ import './TableFront.css';
 import { makeStyles } from '@material-ui/core/styles';
 import { Table, TableContainer, TableHead, TableCell, TableBody, TableRow, Modal, Button, TextField } from '@material-ui/core';
 import { Edit, Delete } from '@material-ui/icons';
-import Autocomplete from '@material-ui/lab/Autocomplete';
+
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
