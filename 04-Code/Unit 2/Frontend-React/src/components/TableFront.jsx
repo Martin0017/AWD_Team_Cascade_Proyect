@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import '../index.css'
-import './TableFront.css';
+import '../styles/index.css';
+import '../styles/TableFront.css';
 import { makeStyles } from '@material-ui/core/styles';
 import { Table, TableContainer, TableHead, TableCell, TableBody, TableRow, Modal, Button, TextField } from '@material-ui/core';
 import { Edit, Delete } from '@material-ui/icons';

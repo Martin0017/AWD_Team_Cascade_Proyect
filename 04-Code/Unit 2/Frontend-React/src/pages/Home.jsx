@@ -1,14 +1,11 @@
 import React from "react";
 /*import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";*/
-import "./Home.css";
+import "../styles/home.css";
 
 const Home = () => {
   return (
-    <>
-      <>
-        <>
           <div className="home-class">
-            <div class="reserveTitle">
+            <div className="reserveTitle">
               <h1 className="h1Main">RESERVA DEL CHOCÓ ANDINO</h1>
             </div>
 
@@ -18,7 +15,7 @@ const Home = () => {
               <div class="pic3"></div>
             </div>
 
-            <section class="information">
+            <section className="information">
               <p className="p1">
                 A tan solo 45 minutos, hacia el noroccidente de la ciudad de
                 Quito, se encuentra un paraíso natural poco conocido pero
@@ -39,27 +36,8 @@ const Home = () => {
                 de plantas del Ecuador.
               </p>
             </section>
-            <footer>
-              <div className="container-footer">
-                <div className="footer2">
-                  <div className="copyright">
-                    © 2022 Todos los Derechos Reservados |{" "}
-                    <a href="/">Team Cascade</a>
-                  </div>
-
-                  <div className="informationFooter">
-                    <a href="/">Informacion</a> |{" "}
-                    <a href="/">Privacion y Politica</a> |{" "}
-                    <a href="/">Terminos y Condiciones</a>
-                  </div>
-                </div>
-              </div>
-            </footer>
 
           </div>
-        </>
-      </>
-    </>
   );
 };
 
