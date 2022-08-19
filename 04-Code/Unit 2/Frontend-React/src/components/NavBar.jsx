@@ -7,11 +7,9 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import HomeIcon from '@mui/icons-material/Home';
 import PetsIcon from '@mui/icons-material/Pets';
 import TravelExploreIcon from '@mui/icons-material/TravelExplore';
@@ -20,20 +18,11 @@ import { Link } from 'react-router-dom';
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '../utils/constanst';
 import LogoutIcon from '@mui/icons-material/Logout';
 
-import { color } from '@mui/system';
-
 export default function NavBar() {
 
-    const navbar_options = () => {
-        console.log(":v");
-    }
-
-    const page = ['Products', 'Pricing', 'Blog'];
-    const pages = [{ page: 'Inicio', icon: <HomeIcon fontSize='large' color='secondary' />, to: '/' },
-    { page: 'Repositorio', icon: <PetsIcon fontSize='large' color='secondary' />, to: '/repository' },
-    { page: 'Conocenos', icon: <TravelExploreIcon fontSize='large' color='secondary' />, to: '/know_us' },
-    { page: 'Acerca de', icon: <InfoIcon fontSize='large' color='secondary' />, to: '/about' }];
-
+    const pages = [{ page: 'Inicio', icon: <HomeIcon fontSize='large' color='success' />, to: '/' },
+    { page: 'Repositorio', icon: <PetsIcon fontSize='large' color='success' />, to: '/repository' },
+    { page: 'Conocenos', icon: <TravelExploreIcon fontSize='large' color='success' />, to: '/know_us' }];
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -109,7 +98,7 @@ export default function NavBar() {
 
     return (
         <Box sx={{ flexGrow: 0 }}>
-            <AppBar position="static" color='secondary' >
+            <AppBar position="static" color='success' >
                 <Toolbar>
                     <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Abrir opciones">
@@ -137,7 +126,7 @@ export default function NavBar() {
                                 <MenuItem key={pages.page} onClick={handleCloseUserMenu} sx={{ width: 350 }} >
                                     <Link to={pages.to} style={{ textDecoration: 'none', display: 'flex', justifyContent: 'center', marginLeft: '50px' }} >
                                         {pages.icon}
-                                        <Typography textAlign="center" fontSize={30} color='blueviolet'>{pages.page}</Typography>
+                                        <Typography textAlign="center" fontSize={30} color='green'>{pages.page}</Typography>
                                     </Link>
                                 </MenuItem>
                             ))}

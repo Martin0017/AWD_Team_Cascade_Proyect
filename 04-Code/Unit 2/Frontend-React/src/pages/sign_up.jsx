@@ -231,7 +231,7 @@ export default function Sign_Up() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Regristrarse
+              Registrarse
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>

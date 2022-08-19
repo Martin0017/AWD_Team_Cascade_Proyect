@@ -192,25 +192,27 @@ const TableFront = (props) => {
         </div>
     )
 
-    const edition = { insert: "", 
-                      delete: "",
-                      edit:""};
+    const edition = {
+        insert: "",
+        delete: "",
+        edit: ""
+    };
 
-    const isLogin = (option,fauna) => {
+    const isLogin = (option, fauna) => {
         if (localStorage.getItem(ACCESS_TOKEN)) {
-            switch(option){
-                case 1: return(<Button id='buttonInsert' onClick={() => openCloseModalInsert()}>Insertar</Button>) ;
-                case 2: return(<Delete className={styles.icons} onClick={() => selectFauna(fauna, 'Eliminar')} />) ; 
-                case 3: return(<Edit className={styles.icons} onClick={() => selectFauna(fauna, 'Editar')} />) ; 
+            switch (option) {
+                case 1: return (<Button id='buttonInsert' onClick={() => openCloseModalInsert()}>Insertar</Button>);
+                case 2: return (<Delete className={styles.icons} onClick={() => selectFauna(fauna, 'Eliminar')} />);
+                case 3: return (<Edit className={styles.icons} onClick={() => selectFauna(fauna, 'Editar')} />);
             }
+        }
     }
-}
 
     return (
         <div className="App">
             <h2 id='repotitle'>Repositorio de Fauna Chocó Andino</h2>
             <br />
-            {isLogin(1,fauna)}
+            {isLogin(1, fauna)}
             <br />
             <TableContainer>
                 <Table>
@@ -238,13 +240,13 @@ const TableFront = (props) => {
                                 <TableCell>{fauna.type}</TableCell>
                                 <TableCell>{<img src={fauna.url_image} alt="Fauna" width="230px" height="230px"></img>} </TableCell>
                                 <TableCell>
-                                    {isLogin(3,fauna)}
+                                    {isLogin(3, fauna)}
                                     &nbsp;&nbsp;&nbsp;
-                                    {isLogin(2,fauna)}
+                                    {isLogin(2, fauna)}
                                 </TableCell>
                             </TableRow>
                         ))}
-                    </TableBody>
+                    </TableBody>                
                 </Table>
             </TableContainer>
             <Modal

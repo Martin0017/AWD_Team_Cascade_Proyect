@@ -18,9 +18,9 @@ export default function Footer() {
 
             <div className="informationFooter">
               <a href="/"><HomeIcon fontSize='large'/></a> &nbsp;&nbsp;&nbsp;&nbsp;{" "}
-              <a href="/"><InfoIcon fontSize='large'/></a> &nbsp;&nbsp;&nbsp;&nbsp;{" "}
-              <a href="/"><PetsIcon fontSize='large'/></a> &nbsp;&nbsp;&nbsp;&nbsp;{" "}
-              <a href="/"><GitHubIcon fontSize='large'/></a>
+              <a href="/know_us"><InfoIcon fontSize='large'/></a> &nbsp;&nbsp;&nbsp;&nbsp;{" "}
+              <a href="/repository"><PetsIcon fontSize='large'/></a> &nbsp;&nbsp;&nbsp;&nbsp;{" "}
+              <a href="https://github.com/Martin0017/AWD_Team_Cascade_Proyect" target="_blank" rel="noreferrer"><GitHubIcon fontSize='large'/></a>
             </div>
           </div>
         </div>
