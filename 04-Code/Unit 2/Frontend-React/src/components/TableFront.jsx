@@ -4,7 +4,7 @@ import '../styles/TableFront.css';
 import { makeStyles } from '@material-ui/core/styles';
 import { Table, TableContainer, TableHead, TableCell, TableBody, TableRow, Modal, Button, TextField } from '@material-ui/core';
 import { Edit, Delete } from '@material-ui/icons';
-
+import { ACCESS_TOKEN, REFRESH_TOKEN } from '../utils/constanst';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
@@ -15,6 +15,7 @@ const baseUrl = 'http://localhost:3001/ChocoAndino/fauna/'
 
 const TableFront = (props) => {
 
+    const fauna = "";
     const styles = useStyles();
     const [data, setData] = useState([]);
     const [modalInsert, setModalInsert] = useState(false);
@@ -191,11 +192,25 @@ const TableFront = (props) => {
         </div>
     )
 
+    const edition = { insert: "", 
+                      delete: "",
+                      edit:""};
+
+    const isLogin = (option,fauna) => {
+        if (localStorage.getItem(ACCESS_TOKEN)) {
+            switch(option){
+                case 1: return(<Button id='buttonInsert' onClick={() => openCloseModalInsert()}>Insertar</Button>) ;
+                case 2: return(<Delete className={styles.icons} onClick={() => selectFauna(fauna, 'Eliminar')} />) ; 
+                case 3: return(<Edit className={styles.icons} onClick={() => selectFauna(fauna, 'Editar')} />) ; 
+            }
+    }
+}
+
     return (
         <div className="App">
             <h2 id='repotitle'>Repositorio de Fauna Chocó Andino</h2>
             <br />
-            <Button id='buttonInsert' onClick={() => openCloseModalInsert()}>Insertar</Button>
+            {isLogin(1,fauna)}
             <br />
             <TableContainer>
                 <Table>
@@ -223,9 +238,9 @@ const TableFront = (props) => {
                                 <TableCell>{fauna.type}</TableCell>
                                 <TableCell>{<img src={fauna.url_image} alt="Fauna" width="230px" height="230px"></img>} </TableCell>
                                 <TableCell>
-                                    <Edit className={styles.icons} onClick={() => selectFauna(fauna, 'Editar')} />
+                                    {isLogin(3,fauna)}
                                     &nbsp;&nbsp;&nbsp;
-                                    <Delete className={styles.icons} onClick={() => selectFauna(fauna, 'Eliminar')} />
+                                    {isLogin(2,fauna)}
                                 </TableCell>
                             </TableRow>
                         ))}

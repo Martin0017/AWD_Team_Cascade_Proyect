@@ -54,9 +54,11 @@ export default function Sign_In() {
       setFull(true);
       setWrg(result.message);
     }else{
-      const { accessToken, refreshToken} = result;
+      const { accessToken, refreshToken, login_user} = result;
       localStorage.setItem(ACCESS_TOKEN, accessToken);
       localStorage.setItem(REFRESH_TOKEN, refreshToken);
+      localStorage.setItem("photo", login_user);
+      window.location.href = "/repository";
     }
   }
 

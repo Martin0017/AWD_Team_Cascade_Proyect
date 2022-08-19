@@ -18,6 +18,7 @@ import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 import InfoIcon from '@mui/icons-material/Info';
 import { Link } from 'react-router-dom';
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '../utils/constanst';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 import { color } from '@mui/system';
 
@@ -51,18 +52,47 @@ export default function NavBar() {
         setAnchorElUser(null);
     };
 
+    const logout = () =>{
+        localStorage.clear();
+        window.location.href = "/";
+    }
+
     const isLogin = () => {
         if (localStorage.getItem(ACCESS_TOKEN)) {
             return (
-                <Link to={'/sign_in'} style={{ textDecoration: 'none' }}>
-                    <Button color="inherit">
+                <Box sx={{ flexGrow: 0 }}>
+                    <IconButton onClick={handleOpenNavMenu} sx={{ p: 3 }}>
                         <Avatar
-                            alt="User"
-                            src="/static/images/avatar/1.jpg"
+                            alt="Remy Sharp"
+                            src={localStorage.getItem("photo")}
                             sx={{ width: 56, height: 56 }}
                         />
-                    </Button>
-                </Link>
+                    </IconButton>
+                    <Menu
+                        sx={{ mt: '55px' }}
+                        id="menu"
+                        anchorEl={anchorElNav}
+                        anchorOrigin={{
+                            vertical: 'top',
+                            horizontal: 'right',
+                        }}
+                        keepMounted
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'right',
+                        }}
+                        open={Boolean(anchorElNav)}
+                        onClose={handleCloseNavMenu}
+                    >
+                        <MenuItem key={"logout"} sx={{ width: 250 }} >
+                            <Button onClick={logout} style={{ textDecoration: 'none', display: 'flex', justifyContent: 'center', marginLeft: '10px' }} >
+                                <LogoutIcon color='error'/>
+                                <Typography textAlign="center" fontSize={20} color='red'>Cerrar Sesion</Typography>
+                            </Button>
+                        </MenuItem>
+                    </Menu>
+                </Box>
+
             )
         } else {
             return (

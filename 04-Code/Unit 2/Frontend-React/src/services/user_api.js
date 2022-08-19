@@ -41,7 +41,6 @@ export function sign_in_api(data){
     return response.json();
   })
   .then(result => {
-    localStorage.setItem("email", data.email);
     return result;
   })
   .catch(err => {
